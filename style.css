@@ -2,30 +2,26 @@
    1. RESET & PENGATURAN DASAR (GLOBAL)
    ========================================= */
 
-/* Tanda bintang (*) artinya memilih SEMUA elemen */
 * {
-    margin: 0; /* Menghapus margin bawaan browser */
-    padding: 0; /* Menghapus padding bawaan browser */
-    box-sizing: border-box; /* Memastikan padding tidak menambah lebar elemen, sangat penting untuk layout! */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Mengatur scroll agar halus saat klik menu navigasi */
 html {
     scroll-behavior: smooth;
 }
 
-/* Pengaturan dasar body website */
 body {
-    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
-    line-height: 1.6; /* Jarak antar baris agar teks mudah dibaca */
-    color: #333; /* Warna teks utama (abu-abu gelap), lebih nyaman di mata daripada hitam pekat */
-    background-color: #f4f4f4; /* Warna background dasar website (abu-abu sangat muda) */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* Menghilangkan garis bawah pada semua link */
 a {
     text-decoration: none;
-    color: inherit; /* Mengikuti warna teks elemen induknya */
+    color: inherit;
 }
 
 /* =========================================
@@ -33,51 +29,47 @@ a {
    ========================================= */
 
 header {
-    background-color: #ffffff; /* Latar belakang putih bersih */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus di bawah header agar terlihat melayang */
-    position: sticky; /* Membuat navbar tetap menempel di atas saat discroll */
-    top: 0; /* Posisi nempel di paling atas */
-    z-index: 1000; /* Memastikan navbar selalu di atas elemen lain */
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     width: 100%;
 }
 
 nav {
-    display: flex; /* Menggunakan Flexbox untuk menyusun logo dan menu secara horizontal */
-    justify-content: space-between; /* Memberi jarak maksimal antara logo (kiri) dan menu (kanan) */
-    align-items: center; /* Memastikan posisi vertikal logo dan menu sejajar di tengah */
-    padding: 1rem 5%; /* Padding atas-bawah 1rem, kiri-kanan 5% dari lebar layar */
-    max-width: 1200px; /* Membatasi lebar maksimal konten agar tidak terlalu melebar di layar besar */
-    margin: 0 auto; /* Menengahkan navbar jika layar sangat lebar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Styling Logo */
 .logo {
-    font-size: 1.5rem; /* Ukuran font logo */
-    font-weight: 700; /* Ketebalan font (Bold) */
-    color: #333; /* Warna abu-abu gelap */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
 }
 
 .logo span {
-    color: #6c757d; /* Warna abu-abu medium untuk variasi teks "Empat" */
+    color: #6c757d;
 }
 
-/* Styling Daftar Menu (ul) */
 .nav-links {
-    list-style: none; /* Menghilangkan titik (bullet) pada list */
-    display: flex; /* Membuat menu berjejer ke samping */
-    gap: 2rem; /* Memberi jarak 2rem antar menu */
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-/* Styling Link Menu (a) */
 .nav-links a {
     font-weight: 500;
-    color: #555; /* Warna teks menu abu-abu */
-    transition: color 0.3s ease; /* Efek transisi halus saat warna berubah */
+    color: #555;
+    transition: color 0.3s ease;
 }
 
-/* Efek saat mouse diarahkan ke menu (Hover) */
 .nav-links a:hover {
-    color: #000; /* Berubah menjadi hitam saat di-hover */
+    color: #000;
 }
 
 /* =========================================
@@ -85,46 +77,43 @@ nav {
    ========================================= */
 
 .hero-kelompok {
-    /* Menggunakan background gradien abu-abu karena kita belum punya gambar bg yang pasti */
-    /* Jika nanti ada gambar, ganti url(...) dengan lokasi gambarmu */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/bg-hero.jpg'); 
-    background-color: #444; /* Warna cadangan jika gambar gagal dimuat */
-    background-size: cover; /* Gambar menutupi seluruh area */
-    background-position: center; /* Fokus gambar di tengah */
-    height: 80vh; /* Tinggi section 80% dari tinggi layar perangkat */
-    display: flex; /* Flexbox untuk menengahkan konten */
-    justify-content: center; /* Tengah secara horizontal */
-    align-items: center; /* Tengah secara vertikal */
-    text-align: center; /* Teks rata tengah */
-    color: #fff; /* Teks berwarna putih */
+    background-color: #444;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
 }
 
 .hero-overlay h1 {
-    font-size: 3.5rem; /* Ukuran font judul besar */
+    font-size: 3.5rem;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 .hero-overlay p {
     font-size: 1.2rem;
-    color: #e0e0e0; /* Putih agak abu-abu */
+    color: #e0e0e0;
     margin-bottom: 20px;
 }
 
-/* Styling Tombol di Hero & Laporan */
 .btn-cek {
     display: inline-block;
-    padding: 12px 30px; /* Ruang di dalam tombol */
-    background-color: #6c757d; /* Warna tombol abu-abu modern */
+    padding: 12px 30px;
+    background-color: #6c757d;
     color: white;
-    border-radius: 50px; /* Membuat sudut tombol membulat (pil) */
+    border-radius: 50px;
     font-weight: 600;
-    transition: background 0.3s ease, transform 0.2s; /* Animasi background dan efek tekan */
+    transition: background 0.3s ease, transform 0.2s;
 }
 
 .btn-cek:hover {
-    background-color: #495057; /* Warna lebih gelap saat hover */
-    transform: translateY(-3px); /* Efek tombol naik sedikit saat di-hover */
+    background-color: #495057;
+    transform: translateY(-3px);
 }
 
 /* =========================================
@@ -132,39 +121,37 @@ nav {
    ========================================= */
 
 .section-container {
-    padding: 80px 20px; /* Memberi jarak napas atas-bawah yang cukup lega */
+    padding: 80px 20px;
 }
 
 .container {
-    max-width: 1100px; /* Membatasi lebar konten agar rapi di tengah */
-    margin: 0 auto; /* Posisi tengah otomatis */
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Kelas utilitas untuk background berbeda */
 .bg-light {
-    background-color: #f8f9fa; /* Abu-abu sangat muda */
+    background-color: #f8f9fa;
 }
 
 .bg-white {
-    background-color: #ffffff; /* Putih bersih */
+    background-color: #ffffff;
 }
 
 .section-title {
-    text-align: center; /* Judul section rata tengah */
+    text-align: center;
     font-size: 2rem;
-    margin-bottom: 50px; /* Jarak antara judul dan konten di bawahnya */
+    margin-bottom: 50px;
     color: #333;
-    position: relative; /* Diperlukan untuk garis bawah dekoratif */
+    position: relative;
 }
 
-/* Membuat garis bawah kecil di bawah judul section */
 .section-title::after {
     content: '';
     display: block;
-    width: 60px; /* Lebar garis */
-    height: 4px; /* Tebal garis */
-    background-color: #6c757d; /* Warna garis */
-    margin: 10px auto 0; /* Posisi tengah */
+    width: 60px;
+    height: 4px;
+    background-color: #6c757d;
+    margin: 10px auto 0;
     border-radius: 2px;
 }
 
@@ -173,42 +160,39 @@ nav {
    ========================================= */
 
 .kelompok-grid {
-    display: grid; /* Menggunakan CSS Grid (Sangat powerful!) */
-    /* Trik agar responsif otomatis tanpa media query yang rumit:
-       Membuat kolom sebanyak mungkin yang muat, dengan lebar minimal 250px */
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-    gap: 30px; /* Jarak antar kartu */
+    gap: 30px;
 }
 
 .kelompok-card {
     background: white;
-    border-radius: 10px; /* Sudut membulat */
-    overflow: hidden; /* Agar gambar tidak keluar dari sudut membulat */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Bayangan halus */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    border: 1px solid #eee; /* Garis tepi tipis */
+    border: 1px solid #eee;
 }
 
 .kelompok-card:hover {
-    transform: translateY(-10px); /* Efek kartu naik saat hover */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* Bayangan menebal */
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 .card-img {
-    height: 200px; /* Tinggi area gambar tetap */
+    height: 200px;
     overflow: hidden;
-    background-color: #ddd; /* Warna placeholder jika gambar loading */
+    background-color: #ddd;
 }
 
 .card-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Gambar akan memotong diri (crop) agar pas tanpa gepeng */
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-/* Efek zoom gambar saat kartu di-hover */
 .kelompok-card:hover .card-img img {
     transform: scale(1.1);
 }
@@ -233,25 +217,24 @@ nav {
    ========================================= */
 
 .content-wrapper, .video-wrapper {
-    display: flex; /* Flexbox agar konten sejajar (jika diperlukan layout kiri-kanan) */
-    flex-direction: column; /* Kita susun ke bawah agar lebih rapi untuk PDF/Video */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
 .pdf-container, .video-container {
     width: 100%;
-    max-width: 800px; /* Lebar maksimal agar tidak terlalu lebar di layar raksasa */
-    height: 500px; /* Tinggi tetap */
-    background-color: #eee; /* Warna loading */
+    max-width: 800px;
+    height: 500px;
+    background-color: #eee;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Mengatur iframe agar memenuhi kontainer */
 iframe {
-    border: none; /* Menghilangkan border bawaan iframe */
+    border: none;
     width: 100%;
     height: 100%;
 }
@@ -267,7 +250,7 @@ iframe {
    ========================================= */
 
 footer {
-    background-color: #343a40; /* Abu-abu sangat gelap (Hampir hitam) */
+    background-color: #343a40;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -278,16 +261,7 @@ footer {
    8. RESPONSIVE (MEDIA QUERIES)
    ========================================= */
 
-/* Aturan khusus untuk layar Tablet dan HP (lebar di bawah 768px) */
 @media (max-width: 768px) {
-    
-    .nav-links {
-        display: none; /* Menyembunyikan menu di HP (Idealnya pakai JavaScript untuk tombol hamburger) */
-        /* Untuk pemula tanpa JS, kita bisa buat menu stack ke bawah atau tetap tampil tapi kecil */
-        /* Alternatif sederhana: Tampilkan vertikal */
-    }
-    
-    /* Override sederhana agar menu tetap tampil di HP tapi vertikal (tanpa JS) */
     nav {
         flex-direction: column;
         gap: 15px;
@@ -301,10 +275,10 @@ footer {
     }
 
     .hero-overlay h1 {
-        font-size: 2.5rem; /* Mengecilkan judul di HP */
+        font-size: 2.5rem;
     }
     
     .pdf-container, .video-container {
-        height: 300px; /* Mengurangi tinggi PDF/Video di HP */
+        height: 300px;
     }
 }
